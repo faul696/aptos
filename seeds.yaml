@@ -22,4 +22,4 @@ seeds:
       330fbb5921fd12d24641633fa1520726b30723e72b0aede5c767721482498405:
         addresses:
             - "/ip4/38.242.193.225/tcp/6180/ln-noise-ik/330fbb5921fd12d24641633fa1520726b30723e72b0aede5c767721482498405/ln-handshake/0"
-        role: Upstream
+        role: "Upstream"
