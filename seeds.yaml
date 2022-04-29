@@ -1,4 +1,8 @@
 seeds:
+      fc643d718a1ff44174f4e37cc18886aba8cc00f1434e689487fd389d6cbecd11:
+       addresses: 
+       - "/ip4/89.208.221.168/tcp/6182/ln-noise-ik/fc643d718a1ff44174f4e37cc18886aba8cc00f1434e689487fd389d6cbecd11//ln-handshake/0"
+        role: "Upstream"
       bb14af025d226288a3488b4433cf5cb54d6a710365a2d95ac6ffbd9b9198a86a:
         addresses:
           - "/dns4/pfn0.node.devnet.aptoslabs.com/tcp/6182/ln-noise-ik/bb14af025d226288a3488b4433cf5cb54d6a710365a2d95ac6ffbd9b9198a86a/ln-handshake/0"
