@@ -13,6 +13,8 @@ echo "=================================================="
 sleep 2
 
 # set vars
+read -p "Enter node name: " APTOS_NODENAME
+echo 'export APTOS_NODENAME='\"${APTOS_NODENAME}\" >> $HOME/.bash_profile
 echo "export WORKSPACE=.aptos" >> $HOME/.bash_profile
 echo "export PUBLIC_IP=$(curl -s ifconfig.me)" >> $HOME/.bash_profile
 source $HOME/.bash_profile
@@ -66,7 +68,7 @@ aptos genesis generate-keys --output-dir ~/$WORKSPACE
 # configure validator
 aptos genesis set-validator-configuration \
   --keys-dir ~/$WORKSPACE --local-repository-dir ~/$WORKSPACE \
-  --username aptosbot \
+  --username $APTOS_NODENAME \
   --validator-host $PUBLIC_IP:6180 \
   --full-node-host $PUBLIC_IP:6182
   
@@ -79,7 +81,7 @@ tee layout.yaml > /dev/null <<EOF
 ---
 root_key: "0x5243ca72b0766d9e9cbf2debf6153443b01a1e0e6d086c7ea206eaf6f8043956"
 users:
-  - aptosbot
+  - $APTOS_NODENAME
 chain_id: 23
 EOF
 
